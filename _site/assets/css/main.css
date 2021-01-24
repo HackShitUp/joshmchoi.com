@@ -1,0 +1,485 @@
+/** Fonts */
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../fonts/avenir-next-heavy.woff"),
+    url("../fonts/avenir-next-heavy.ttf");
+}
+
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("../fonts/avenir-next-bold.woff"),
+    url("../fonts/avenir-next-bold.ttf");
+}
+
+@font-face {
+  font-family: "AvenirNext-Demibold";
+  src: url("../fonts/avenir-next-demi.woff"),
+    url("../fonts/avenir-next-demi.ttf");
+}
+
+@font-face {
+  font-family: "AvenirNext-Medium";
+  src: url("../fonts/avenir-next-medium.woff"),
+    url("../fonts/avenir-next-medium.ttf");
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  font-family: "AvenirNext-Medium";
+  color: #ff0055;
+  text-decoration: none;
+}
+
+/* Header */
+h1 {
+  font-family: "AvenirNext-Bold";
+  font-size: 32px;
+  color: black;
+}
+
+h2 {
+  font-family: "AvenirNext-Demibold";
+  font-size: 32px;
+  color: black;
+}
+
+h3 {
+  font-family: "AvenirNext-Bold";
+  font-size: 24px;
+  color: black;
+}
+
+h4 {
+  font-family: "AvenirNext-Demibold";
+  font-size: 24px;
+  color: black;
+}
+
+/* Paragraph */
+p {
+  font-family: "AvenirNext-Medium";
+  font-size: 16px;
+  color: black;
+  line-height: 1.5em;
+}
+
+text {
+  text-align: left;
+}
+
+blockquote {
+  text-align: left;
+  border-left: 0.25em solid #e5e5ea;
+  color: #e5e5ea;
+}
+
+img {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+}
+
+video {
+  width: 250px;
+  height: 540px;
+  margin: 20px 0 20px 250px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #e8e8e8;
+}
+
+video:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 650px;
+  margin: 0 auto;
+  padding: 8px;
+  align-content: center;
+  justify-content: center;
+  border-color: transparent;
+  outline: none;
+}
+
+@keyframes marquee {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: white;
+  border-top: 0.5px solid #E5E5EA;
+}
+
+/* Markdown styling */
+text {
+  text-align: left;
+}
+
+li {
+  font-family: "AvenirNext-Medium";
+  font-size: 16px;
+}
+
+code {
+  display: inline-block;
+  padding: 16px;
+  white-space: pre-wrap;
+  background-color: #e5e5ea;
+  border-radius: 16px;
+}
+
+
+/* classes */
+a.active {
+  font-family: "AvenirNext-Bold";
+  font-size: 14px;
+  border-radius: 20px;
+  color: #ff0055;
+  text-decoration: none;
+}
+
+.download-button {
+  width: 200px;
+  height: 60px;
+  margin-top: 20px;
+  font-family: "AvenirNext-Bold";
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #ffff;
+  text-align: center;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.download-button:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.navigationbar {
+  overflow: hidden;
+  background-color: white;
+  padding: 16px 16px 16px 16px;
+  border-bottom: 0.5px solid #E5E5EA;
+}
+
+.navigationbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-decoration: none;
+  line-height: 40px;
+  font-family: "AvenirNext-Bold";
+  font-size: 16px;
+  padding-left: 32px;
+}
+
+.navigationbar a:hover {
+  background-color: transparent;
+  color: #ff0055;
+}
+
+.navigationbar .icon {
+  display: none;
+  color: black;
+}
+
+/* row - stack columns into rows and vice versa */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* column - individual blocks in a row */
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  vertical-align: middle;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  height: 170px;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.mover {
+  animation: moveSlideshow 12s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-99%);
+  }
+}
+
+.party-box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  /* margin: 20px 5px; */
+  border-radius: 20px;
+  background: #808080;
+}
+
+.underline-magic {
+  font-family: "AvenirNext-Bold";
+  font-size: 32px;
+  text-align: center;
+  background-image: linear-gradient(120deg, #ff0055 0%, #ff0055 100%);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  transition: background-size 0.1s ease-in;
+}
+
+.underline-magic:hover {
+  background-size: 100% 100%;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+
+  100% {
+    background-position: 500%;
+  }
+}
+
+/* IDs */
+#app-icon {
+  width: 32px;
+  height: 32px;
+}
+
+#splash-content {
+  display: block;
+  text-align: center;
+}
+
+#splash-content span {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#splash-content a:hover {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+/* Mobile responsiveness */
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
+
+  /* .image {
+    flex: 1;
+  } */
+
+  blockquote.twitter-tweet {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Navigation Bar */
+  .navigationbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navigationbar a.icon {
+    float: right;
+    display: block;
+  }
+
+  .navigationbar.responsive {
+    position: relative;
+  }
+
+  .navigationbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navigationbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.flip-2-hor-top-1 {
+  -webkit-animation: flip-2-hor-top-1 0.5s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-8-23 19:39:16
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation flip-2-hor-top-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-2-hor-top-1 {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0);
+    transform: translateY(0) rotateX(0);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100%) rotateX(-180deg);
+    transform: translateY(-100%) rotateX(-180deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+}
+@keyframes flip-2-hor-top-1 {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0);
+    transform: translateY(0) rotateX(0);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100%) rotateX(-180deg);
+    transform: translateY(-100%) rotateX(-180deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+}
+
+
+
+
+
+#gradient
+{
+    height:300px;
+    width:300px;
+    border:1px solid black;
+    font-size:30px;
+    background: linear-gradient(130deg, #ff7e00, #ffffff, #5cff00);
+    background-size: 200% 200%;
+
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
+}
+
+
+
+
+/**
+Image Animation
+*/
+.pulse {
+  animation: pulse 3s infinite;
+  margin: 0 auto;
+  display: table;
+  margin-top: 50px;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+    
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+    
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/**
+  Animated Text
+*/
+@keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 6.9em;
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.typewriter {
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+.typewriter::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
